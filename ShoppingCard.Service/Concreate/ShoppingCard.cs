@@ -31,7 +31,7 @@ namespace ShoppingCard
                         if (item.Title == product.Title)
                         {
                             control = false;
-                            item.Amount = item.Amount + product.Amount;
+                            item.Amount += product.Amount;
                         }
                     }
                     if (control)
@@ -51,7 +51,7 @@ namespace ShoppingCard
         {
             Coupon = coupon;
         }
-        //indirimsiz Toplam Ödeecek Tutar
+        //indirimsiz Toplam Ödenecek Tutar
         public decimal GetTotalAmount()
         {
             decimal result = 0;
@@ -113,7 +113,7 @@ namespace ShoppingCard
 
             return result;
         }
-        //aldığı Teslimat Tutarı(calculateDeliveryCost) parametesi ile birlikte Ürünler(ProductsList)
+        //Alınan Teslimat Tutarı(calculateDeliveryCost) parametesi ile birlikte Ürünler(ProductsList)
         //ekrana basılır...
         public ShowResult Print(decimal calculateDeliveryCost)
         {

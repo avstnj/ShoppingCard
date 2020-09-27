@@ -8,24 +8,6 @@ namespace ShoppingCard
 {
     public class DeliveryCost : IDeliveryCost
     {
-        //public decimal CostDelivery { get; private set; }
-        //public decimal CostProduct { get; private set; }
-        //public DeliveryCost(decimal costDelivery, decimal costProduct)
-        //{
-        //    CostDelivery = costDelivery;
-        //    CostProduct = costProduct;
-        //}
-
-        //public decimal CalculateDeliveryCost(IShoppingCard card)
-        //{
-        //    if (card == null)
-        //    {
-        //        throw new ArgumentNullException($"{nameof(card)} is Null");
-        //    }
-        //    int countOfDeliveries = card.GetCountDeliveries();
-        //    int countOfProducts = card.GetTotalProductCount();
-        //    return (CostDelivery * countOfDeliveries) + (CostProduct * countOfProducts);
-        //}
         public decimal CalculateDeliveryCost(DeliveryCostModel model)
         {
             try

@@ -29,12 +29,12 @@ namespace ShoppingCard.UI.Controllers
             Product orange = new Product(title: "Schweppes", price: 8, category: beverage, amount: 5);
             Product sportShoe = new Product(title: "Toshiba", price: 250, category: computer, amount: 2);
 
-            //Ürünlere ekleme yapılıyor...
+            //Ürünler Listesine ürünler ekleniyor...
             _shoppingCard.AddItem(apple);
             _shoppingCard.AddItem(orange);
             _shoppingCard.AddItem(sportShoe);
 
-            //Kampnayalar tanımlanıyor ve Kampanya listesine ekleniyor...
+            //Kampanyalar tanımlanıyor ve Kampanya listesine ekleniyor...
             List<Campaign> listCampaign = new List<Campaign>();
             Campaign cmp1 = new Campaign(category: beverage, minAmount: 6, discountAmount: 10);
             Campaign cmp2 = new Campaign(category: computer, minAmount: 200, discountAmount: 20);
@@ -50,7 +50,8 @@ namespace ShoppingCard.UI.Controllers
                 CountOfDeliveries = _shoppingCard.GetCountDeliveries(),
                 CountOfProducts = _shoppingCard.GetTotalProductCount()
             };
-            //Talimat Hesaplanıyor...
+
+            //Teslimat Hesaplanıyor...
             decimal calculateDeliveryCost = _deliveryCost.CalculateDeliveryCost(deliveryCostModel);
 
             //Kupon Tanımı yapılıyor...
@@ -62,7 +63,6 @@ namespace ShoppingCard.UI.Controllers
 
             //Toplam Tutara Kupon indirimi uygulanıyor ve Ürün bilgileri ekrana basılıyor...
             ShowResult showResult = _shoppingCard.Print(calculateDeliveryCost);
-
             return View(showResult);
         }
     }

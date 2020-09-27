@@ -7,6 +7,6 @@ namespace ShoppingCard.Interface
 {
     public interface IDeliveryCost
     {
-        decimal CalculateDeliveryCost(DeliveryCostModel mode);
+        decimal CalculateDeliveryCost(DeliveryCostModel model);
     }
 }

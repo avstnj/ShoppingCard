@@ -10,7 +10,6 @@ namespace ShoppingCard.Interface
         void AddItem(Product product);
         int GetCountDeliveries();
         int GetTotalProductCount();
-        //decimal GetDeliveryCostCalculate();
         void ApplyCampingsDiscounts(List<Campaign> campaigns);
         void ApplyCoupon(Coupon coupon);
         decimal GetTotalAmount();
