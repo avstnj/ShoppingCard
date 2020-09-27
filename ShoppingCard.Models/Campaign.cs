@@ -12,7 +12,7 @@ namespace ShoppingCard.Models
 
         public Campaign(Category category, int minAmount, decimal discountAmount)
         {
-            Category = category;
+            Category = category; 
             MinAmount = minAmount;
             DiscountAmount = discountAmount;
         }
